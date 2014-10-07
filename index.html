@@ -1,23 +1,123 @@
-<!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="react.js"></script>
 
-    <title>How to find the coordinates of your mouse pointer</title> 
-        <h1>How to find the coordinates of your mouse pointer</h1>
 <html>
-<head>
-</head>
-<body style="margin:0px;">
+  <!--new react assignement; code adapted from http://videofortheweb.org/code example -->
 
-<div id="coordiv"style="width:500px;height:500px;border:1px solid"onmousemove="myFunction(event)"onmouseout="clearCoor()"></div>
-
-<p>If you mouse over the rectangle above, you'll get the coordinates of your sunny mouse pointer.</p> 
-
- <code>test</code>, 
-
-<p id="test"></p>
-
-</body>
+	<head>
+		<title>Learn About Meditation</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+		<style type="text/css">
+			*{
+				margin: 20
+               px;
+				padding: 0px;
+				font-family: Garamond;
+			}
+ 
+			/*BUTTON STYLING*/
+			.buttonContainer{
+				position: fixed;
+				margin-left: 5px;
+				z-index: 100px;
+			}
+			.button{
+				color: black;
+				border-style: solid;
+				border-width: 5px;
+				border-color: grey;
+				width: 125px;
+				text-align: center;
+				padding: 5px;
+				margin: 5px;
+			}
+			.button:hover{
+				background-color: rgb(177,207,118);
+			}
+ 
+			/*VIDEO STYLING*/
+			.videoContainer{
+				clear: left;
+				margin-top: 60px;
+				width: 100%;
+			}
+			#videoTitle{
+				margin-top: 10px;
+				margin-bottom: 10px;
+				text-align: center;
+				font-size: 24px;
+			}
+			#video{
+				margin: auto;
+				width: 640px;
+			}
+			#videoDescription{
+				margin-top: 20px;
+				text-align: center;
+				font-size: 16px;
+			}
+ 
+		</style>
+ 
+		<script type="text/javascript">
+ 
+			var videos = [
+				{
+					title: "Beginner meditation",
+					iframe : '<iframe width="640" height="360" src="http://www.youtube-nocookie.com/embed/8a5fO8jE7mc?rel=0" frameborder="0" allowfullscreen></iframe>',
+					description: "This video teaches you how to start meditating!"
+				},
+				{
+					title: "Mindfulness meditation",
+					iframe : '<iframe width="640" height="360" src="http://www.youtube-nocookie.com/embed/3nwwKbM_vJc?rel=0" frameborder="0" allowfullscreen></iframe>',
+					description: "This video will teach you about the history, theory, and practice of mindfulness meditation."
+				},
+				{
+					title: "Transcendental meditation",
+					iframe : '<iframe width="640" height="360" src="http://www.youtube-nocookie.com/embed/ZjT831cjaUY?rel=0" frameborder="0" allowfullscreen></iframe>',
+					description: "This video will teach you about transcendental meditation techniques."
+				}
+			];
+ 
+			$( document ).ready( function(){
+ 
+				$('#buttonOne').click(function(){
+					console.log("We clicked Button One!");
+					$('#videoTitle').html(videos[0].title);
+					$('#video').html(videos[0].iframe);
+					$('#videoDescription').html(videos[0].description);
+				});
+ 
+				$('#buttonTwo').click(function(){
+					console.log("We clicked Button Two!");
+					$('#videoTitle').html(videos[1].title);
+					$('#video').html(videos[1].iframe);
+					$('#videoDescription').html(videos[1].description);
+				});
+ 
+				$('#buttonThree').click(function(){
+					console.log("We clicked Button Three!");
+					$('#videoTitle').html(videos[2].title);
+					$('#video').html(videos[2].iframe);
+					$('#videoDescription').html(videos[2].description);
+				});
+ 
+			});
+ 
+		</script>
+	</head>
+ 
+	<body>
+		<div class="buttonContainer">
+			<div class="button" id="buttonOne">Beginner meditation</div>
+			<div class="button" id="buttonTwo">Mindfulness meditation</div>
+			<div class="button" id="buttonThree">Another kind of meditation
+          </div>
+		</div>
+ 
+		<div class="videoContainer">
+			<div id="videoTitle">Select A Video To Learn About Meditation!</div>
+			<div id="video"></div>
+			<div id="videoDescription"></div>
+		<div>
+	</body>
 </html>
-
-<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/nature/nat-11/nat1006.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2012/01/26/sun-41.html" target="_blank" title="Sun"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Sun" style="position:absolute; top: 0px; right: 0px;" /></a>
