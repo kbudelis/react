@@ -10,6 +10,46 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 
+		<style type="text/css">
+			*{
+				margin: 20
+               px;
+				padding: 0px;
+				font-family: Garamond;
+			}
+ 
+			/*BUTTON STYLING*/
+			.buttonContainer{
+				position: fixed;
+				margin-left: 5px;
+				z-index: 100px;
+			}
+			.button{
+				color: black;
+				border-style: solid;
+				border-width: 5px;
+				border-color: grey;
+				width: 125px;
+				text-align: center;
+				padding: 5px;
+				margin: 5px;
+			}
+			.button:hover{
+				background-color: rgb(177,207,118);
+			}
+ 
+			/*VIDEO STYLING*/
+			.videoContainer{
+				clear: left;
+				margin-top: 60px;
+				width: 100%;
+			}
+
+ 
+		</style>
+
+
+
   <script>
   $(function() {
     $( "#accordion" ).accordion();
